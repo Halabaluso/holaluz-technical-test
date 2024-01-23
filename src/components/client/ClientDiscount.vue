@@ -56,8 +56,10 @@ onMounted(async () => {
   await supplyStore.ReadSupplys()
   IsOkPromotion()
   if (await IsOkPromotion()) {
-    ValidateSpecial5Discount()
-    ValidateSpecial10Discount()
+    ValidateSpecial12Discount()
+    if(data.is12discount === true){
+      ValidateSpecial5Discount()
+    }
   }
 })
 
@@ -101,7 +103,7 @@ const ValidateSpecial5Discount = () => {
   return response
 }
 
-const ValidateSpecial10Discount = () => {
+const ValidateSpecial12Discount = () => {
   let response = true
   let neighborsArrayData: Array<SupplyInterface> = []
 

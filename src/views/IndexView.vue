@@ -4,7 +4,8 @@
 </script>
 
 <template>
-  <main>
+  
+  <main class="animate-fade">
     <HeroHome />
   </main>
 </template>

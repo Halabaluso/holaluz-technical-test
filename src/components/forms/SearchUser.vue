@@ -13,7 +13,7 @@
             v-model="data.userCups"
             type="number"
             placeholder="Ej: 000003"
-            class="input input-bordered w-full"
+            class="input input-bordered border-primary w-full animate-shake animate-delay-500 shadow"
           />
           <button type="submit" class="btn bg-gradient-to-br from-yellow-400 via-red-400 to-pink-600 text-white">Buscar mi oferta <i class="fa-solid fa-magnifying-glass"></i></button>
           <button type="button" @click="router.push(`/`)" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Atrás</button>

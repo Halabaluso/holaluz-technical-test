@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="animate-fade">
       <SearchUser/>
     </main>
   </template>

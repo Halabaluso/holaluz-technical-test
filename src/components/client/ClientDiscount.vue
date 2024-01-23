@@ -54,10 +54,8 @@ const data = reactive({
 //Take DB Data and do all logic in mounted
 onMounted(async () => {
   await supplyStore.ReadSupplys()
-  IsOkPromotion()
   if (await IsOkPromotion()) {
-    ValidateSpecial12Discount()
-    if(data.is12discount === true){
+    if(!ValidateSpecial12Discount()){
       ValidateSpecial5Discount()
     }
   }

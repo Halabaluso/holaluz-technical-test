@@ -33,7 +33,7 @@
                   </template>
                   <template v-if="userData === `customer-premium`">
                     <td class="w-full">
-                      <p class="p-1 rounded-lg bg-secondary">Consumidor: Plan premium</p>
+                      <p class="p-1 rounded-lg bg-secondary w-max">Consumidor: Plan premium <i class="fa-solid fa-award"></i></p>
                     </td>
                   </template>
                 </template>
@@ -47,7 +47,7 @@
                 </template>
                 <td>
                   <div>
-                    <button class="btn btn-primary" disabled>Modificar</button>
+                    <button class="btn btn-primary w-max" disabled>Modificar <i class="fa-regular fa-pen-to-square"></i></button>
                   </div>
                 </td>
               </tr>

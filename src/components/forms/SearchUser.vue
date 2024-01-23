@@ -25,9 +25,8 @@
 
 <script setup lang="ts">
 //Import methods & interfaces
-import { defineProps, reactive } from 'vue'
+import { reactive } from 'vue'
 import { useRouter } from "vue-router"
-import { ReadDb } from "../../db/DbConnect"
 
 //Import stores
 import { toast } from '../../stores/Toast'
@@ -53,6 +52,8 @@ const SearchUser = async () => {
     }else{
       toast().ShowToast(`No hay ningún cliente con este identificador. 😕`, 'alert-error', 2000)
     }
+  }else{
+    toast().ShowToast('Por favor, complete bien el formulario.', 'alert-error', 3000)
   }
 }
 
@@ -60,7 +61,6 @@ const SearchUser = async () => {
 const ValidateForm = () => {
   let response = true
     if (data.userCups.toString().length === 0) {
-        toast().ShowToast('Por favor, complete bien el formulario.', 'alert-error', 3000)
       response = false
     }
 

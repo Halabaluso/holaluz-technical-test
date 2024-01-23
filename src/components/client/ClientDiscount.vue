@@ -13,8 +13,8 @@
       <div v-show="data.is5Discount === true">
         <p>Además, dispones de un descuento especial del <span class="p-1 bg-white text-pink-600 rounded-lg">5%</span></p>
       </div>
-      <div v-show="data.is10discount === true">
-        <p class="font-bold">Además, dispones de un descuento especial del <span class="p-1 bg-white text-pink-600 rounded-lg">10%</span></p>
+      <div v-show="data.is12discount === true">
+        <p class="font-bold">Además, dispones de un descuento especial del <span class="p-1 bg-white text-pink-600 rounded-lg">12%</span></p>
       </div>
       <button class="btn  btn-secondary">Contactar con nosotros. <i class="fa-solid fa-headset"></i></button>
     </div>
@@ -47,7 +47,7 @@ const supplyStore = supply()
 const data = reactive({
   promoOk: false,
   is5Discount: false,
-  is10discount: false,
+  is12discount: false,
   discountPercent: 0,
 })
 
@@ -122,7 +122,7 @@ const ValidateSpecial10Discount = () => {
   if(totalMountNeighbors < 100){
     response = false
   }
-  data.is10discount = response
+  data.is12discount = response
   return response
 }
 </script>
